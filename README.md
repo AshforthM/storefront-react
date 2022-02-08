@@ -1,2 +1,1 @@
-# storefront-react
- vhs storefront using react
+vhs storefront with react & styled components
