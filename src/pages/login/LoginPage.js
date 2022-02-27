@@ -1,40 +1,115 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import styled from 'styled-components';
+
+import Branding from "../../components/login/Branding";
+import { Button } from "../../ui/buttons";
 
 function LoginPage(props) {
-
   let navigation = useNavigate();
 
-  function onHandleSubmit(e){
+  function onHandleSubmit(e) {
     //firebase auth
     e.preventDefault();
-    navigation('dashboard');
+    navigation("dashboard");
   }
 
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Login Page</Link>
-          </li>
+    <LoginContainer>
+      <Branding />
 
-          <li>
-            <Link to="/dashboard">DashBoard Page</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <header>
-        <h1>Page Not Found</h1>
+      <LoginStyles>
         <form onSubmit={onHandleSubmit}>
-          <input type="text" /*type="email" required*/ />
-          <input type="text" /*type="password" required*/ />
-          <button type="submit">Form submission</button>
+          <h1>VHS Store</h1>
+          <h2>sign in</h2>
+          <InputStyles>
+            <label for="" type="text">Email</label><br/>
+            <input type="text" placeholder="youremail@vhs.com" /*type="email" required*/ />
+          </InputStyles>
+          <InputStyles>
+            <label for="" type="text">Password</label><br/>
+            <input type="text" placeholder="your password" /*type="password" required*/ />
+          </InputStyles>
+          <SignInStyles>
+            <Button type="submit">Sign in</Button>
+          </SignInStyles>
+          <ForgotPasswordStyles>
+            <a href="">Forgot Password</a> 
+          </ForgotPasswordStyles>         
         </form>
-      </header>
-    </>
+      </LoginStyles>
+    </LoginContainer>
   );
-}
+};
+
+const LoginContainer = styled.div`  
+  display: flex;
+  flex: wrap;
+  flex-direction: row;
+  flex-basis: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  width: min-content(90%, 70.5rem);
+  background-color: #FAF9F6;
+
+  > div{
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+`;
+
+const LoginStyles = styled.div`
+  text-align: left;
+
+  > * {
+    padding: 12rem 2rem;
+  }
+
+  form{
+    font-size: 1.5rem;
+    color: #121616;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    height: 1031px;
+    > h1, h2, div{
+      width: 100%;
+    }
+  }
+  h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fbae2d;
+  }
+  h2{
+    font-size: 3rem;
+    font-weight: 100;
+  }
+
+`;
+
+const InputStyles = styled.div`
+  input{
+    width: 20rem;
+  }
+`;
+
+const SignInStyles = styled.div`
+  Button{
+    width: 20rem;
+  }
+`;
+
+const ForgotPasswordStyles = styled.div`
+  a{
+    color: inherit;
+    text-decoration: underline;
+  }
+`;
 
 export default LoginPage;

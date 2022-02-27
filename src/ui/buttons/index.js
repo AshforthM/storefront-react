@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
 
-background-color: ${props => props.bgcolor || "transparent"};
+/* background-color: ${props => props.bgcolor || "transparent"};
 
 border: none;
 
@@ -18,8 +18,11 @@ padding: ${props => props.padding || "0.5rem 2rem"};
 
 color: ${props => props.color || "grey"};
 
-font-size: ${props => props.size || "1rem"};
+font-size: ${props => props.size || "1rem"}; */
 
+    &:hover{
+        cursor: pointer;
+    }
 `;
 
 

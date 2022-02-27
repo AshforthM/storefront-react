@@ -361,6 +361,16 @@ body {
  background-color: #fff;
 }
 
-`
+@font-face {
+    font-family: 'DaretoMandra';
+    src: url('../fonts/DaretroMandra.ttf');
+}
+
+*{
+  font-family: 'DaretoMandra';
+}
+
+`;
+
 
 export {GlobalStyles}
