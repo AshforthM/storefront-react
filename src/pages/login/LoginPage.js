@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Branding from "../../components/login/Branding";
 import { Button } from "../../ui/buttons";
+import {auth} from "../../libs/firebase/firebaseConfig"
 
 function LoginPage(props) {
   let navigation = useNavigate();
@@ -23,12 +24,10 @@ function LoginPage(props) {
           <h1>VHS Store</h1>
           <h2>sign in</h2>
           <InputStyles>
-            <label for="" type="text">Email</label><br/>
-            <input type="text" placeholder="youremail@vhs.com" /*type="email" required*/ />
+            <input type="text" placeholder="Email" /*type="email" required*/ />
           </InputStyles>
           <InputStyles>
-            <label for="" type="text">Password</label><br/>
-            <input type="text" placeholder="your password" /*type="password" required*/ />
+            <input type="text" placeholder="Password" /*type="password" required*/ />
           </InputStyles>
           <SignInStyles>
             <Button type="submit">Sign in</Button>
