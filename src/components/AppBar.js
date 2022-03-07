@@ -19,7 +19,15 @@ export default function AppBar() {
 }
 
 const AppBarStyles = styled.nav`
-  box-shadow: 0 0 2px 1px grey;
-  padding: 0.5rem 1rem;
-  height: 64px;
+  //background-color: yellow;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 1px 0.5px #121616;
+  padding: 0.5rem;
+  min-height: 64px;
+  ul{
+      display: flex;
+      justify-content: space-between;
+  }
+  font-size: 22px;
 `;

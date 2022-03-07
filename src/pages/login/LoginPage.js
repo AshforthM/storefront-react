@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Branding from "../../components/login/Branding";
-import { Button } from "../../ui/buttons";
+import { Button, ButtonSubmit } from "../../ui/buttons";
 import { toastError } from "../../ui/toasts";
 
 function LoginPage(props) {
@@ -45,24 +45,22 @@ function LoginPage(props) {
             <InputStyles>
               <input
                 type="text"
-                placeholder="Email"
-                type="email"
+                placeholder="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </InputStyles>
             <InputStyles>
               <input
-                type="text"
-                placeholder="Password"
+                placeholder="password"
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </InputStyles>
             <SignInStyles>
-              <Button type="submit">Sign in</Button>
+              <ButtonSubmit type="submit">sign in</ButtonSubmit>
             </SignInStyles>
             <ForgotPasswordStyles>
-              <a href="">Forgot Password</a>
+              <a href="">forgot password</a>
             </ForgotPasswordStyles>
           </form>
         </LoginStyles>
@@ -136,8 +134,12 @@ const SignInStyles = styled.div`
 
 const ForgotPasswordStyles = styled.div`
   a {
-    color: inherit;
+    color: #121616;
     text-decoration: underline;
+    transition: all 0.1s ease-in-out;
+    &:hover {        
+        color: #fbae2d;
+    }
   }
 `;
 
