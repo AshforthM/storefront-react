@@ -22,7 +22,7 @@ const AppBarStyles = styled.nav`
   //background-color: yellow;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 1px 0.5px #121616;
+  box-shadow: 2px 0 2px 0.5px #121616;
   padding: 0.5rem;
   min-height: 64px;
   ul{

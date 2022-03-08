@@ -26,7 +26,7 @@ const SideBarStyles = styled.div`
   //background-color: green;
   width: 289px;
   min-height: calc(100vh - calc(64px));
-  box-shadow: 0 1px 0px 0.5px #121616;
+  box-shadow: 2.5px 0 2.5px -2px #121616;
   margin: 0rem 0;
   padding: 3rem;
   //border-radius: 4px;
