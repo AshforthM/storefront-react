@@ -8,7 +8,7 @@ export default function AppBar() {
     <AppBarStyles>
       <ul>
         <li>
-          <Link to="/">Login Page</Link>
+          <Link to="/">VHS Store</Link>
         </li>
         <li>
           <Link to="/dashboard">DashBoard Page</Link>

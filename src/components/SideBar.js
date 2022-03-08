@@ -1,10 +1,23 @@
 import React from 'react'
 import styled from 'styled-components';
+import { signOut } from 'firebase/auth';
+import { auth } from '../libs/firebase/firebaseConfig';
+
+import { Button, ButtonSubmit } from '../ui/buttons';
 
 export default function SideBar() {
+
+  async function onLogoutRequest(e){
+    await signOut(auth);
+  }
+
   return (
     <SideBarStyles>
-      
+      <ul>
+        <li>
+          <ButtonSubmit onClick={onLogoutRequest}>Logout</ButtonSubmit>
+        </li>
+      </ul>
     </SideBarStyles>
   )
 }
