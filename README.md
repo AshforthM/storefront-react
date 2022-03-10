@@ -1,2 +1,2 @@
 # Storefront VHS - React
-Sample storefront for selling VHS tapes. Created using React (JavaScript) and Firebase. Users can login using Firebase Authentication and create, read, update and delete products using Realtime Database. Uses React Router for routing, styled components, and react icons. Deployed using Netlify.
+Sample storefront management website for selling VHS tapes. Created using React (JavaScript) and Firebase. Users can login using Firebase Authentication and create, read, update and delete products using Realtime Database. Uses React Router for routing, styled-components, and react-toastify. Deployed using Netlify.
