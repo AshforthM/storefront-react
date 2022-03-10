@@ -2,10 +2,10 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
-//react-icons
+import { IconAppbar } from "../ui/icons";
+
 import { IoSettingsOutline, IoMailOutline, IoNotificationsOutline } from 'react-icons/io5';
-import {CgProfile} from 'react-icons/cg';
-import { GiVhs } from 'react-icons/gi';
+import { CgProfile } from 'react-icons/cg';
 
 
 export default function AppBar(props) {
@@ -14,17 +14,16 @@ export default function AppBar(props) {
       <ul>
         <AppBarBrandingStyles>
           <AppBarBrandingLogo>
-            <AppBarLogoStyles><GiVhs/></AppBarLogoStyles>
-            <AppBarTitleLg>VHS</AppBarTitleLg>
-            <AppBarTitleSm> Store</AppBarTitleSm>
+            <h2>VHS</h2>
+            <h3> Store</h3>
           </AppBarBrandingLogo>
         </AppBarBrandingStyles>
         <AppBarOptionsStyles>
           {/* settings, avatar, notifications, email */}
-          <AppBarIcon><IoNotificationsOutline/></AppBarIcon>
-          <AppBarIcon><IoMailOutline/></AppBarIcon>          
-          <AppBarIcon><CgProfile/></AppBarIcon>
-          <AppBarIcon><IoSettingsOutline/></AppBarIcon>
+          <IconAppbar><IoNotificationsOutline/></IconAppbar>
+          <IconAppbar><IoMailOutline/></IconAppbar>          
+          <IconAppbar><CgProfile/></IconAppbar>
+          <IconAppbar><IoSettingsOutline/></IconAppbar>
         </AppBarOptionsStyles>
       </ul>
     </AppBarStyles>
@@ -32,7 +31,6 @@ export default function AppBar(props) {
 }
 
 const AppBarStyles = styled.nav`
-  //background-color: yellow;
   width: 100%;
   position: relative;
   box-shadow: 2px 0 2px 0.5px #121616;
@@ -45,42 +43,40 @@ const AppBarStyles = styled.nav`
   font-size: 22px;
 `;
 
-const AppBarBrandingStyles = styled.ul`
-  
+const AppBarBrandingStyles = styled.div`
+  width: calc(289px - 8px);
+  height: calc(64px - 16px);
+  //box-shadow: 2.5px 0px 2.5px -2px #121616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px 0 0;
 `;
 
 const AppBarBrandingLogo = styled.a`
   text-decoration: none;
   color: inherit;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover{
     text-decoration: none;
     color: inherit;
   }
-`;
 
-const AppBarLogoStyles = styled.i`
-  padding: 1rem;
-`;
+  h2, h3{
+    margin: 0;
+    padding: 0rem 0.25rem;
+    font-size: 36px;
+  }
 
-const AppBarTitleLg = styled.span`
-  
-`;
+  svg{
 
-const AppBarTitleSm = styled.span`
-  
+  }
 `;
 
 const AppBarOptionsStyles = styled.ul`
   
-`;
-
-const AppBarIcon = styled.li`
-  padding: 0 0.5rem;
-  transition: all 1s ease-in-out;
-  svg{
-    &:hover {
-      //cursor: pointer;
-    }
-  }    
 `;

@@ -27,7 +27,7 @@ function DashBoardPage(props) {
     return (
       <Dashboard>
         <AppBar />
-        <SideBar />
+        <SideBar title="" />
         <Panel />
       </Dashboard>
     );

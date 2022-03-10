@@ -16,7 +16,8 @@ export default function Panel(props) {
 };
 
 const PanelStyles = styled.div`
+  background-color: #EDECE9;
   min-height: calc(100vh - calc(64px));
-  width: calc(100vw - 289px);
+  width: calc(100vw - 289px - 0.1rem);
   //box-shadow: 0 0 0.1px 0.5px #121616;
 `;
