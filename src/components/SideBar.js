@@ -5,7 +5,7 @@ import { auth } from '../libs/firebase/firebaseConfig';
 
 import { Button, ButtonSubmit } from '../ui/buttons';
 
-export default function SideBar() {
+export default function SideBar(props) {
 
   async function onLogoutRequest(e){
     await signOut(auth);

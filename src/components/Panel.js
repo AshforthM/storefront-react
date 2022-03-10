@@ -5,10 +5,10 @@ import CardContainer from './CardContainer';
 import CardList from './CardList'
 
 
-export default function Panel() {
+export default function Panel(props) {
   return (
     <PanelStyles>
-      <CardContainer>
+      <CardContainer title="Product Listings">
         {/* <CardList /> */}
       </CardContainer>    
     </PanelStyles>

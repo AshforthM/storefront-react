@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import CardList from './CardList';
 
-export default function CardContainer() {
+export default function CardContainer(props) {
   return (
     <CardContainerStyles>
-        <CardContainerHeadingStyles>Product Listings</CardContainerHeadingStyles>
+        <CardContainerHeadingStyles>{props.title || "Product Display"}</CardContainerHeadingStyles>
         {/* <CardList/> */}
     </CardContainerStyles>
   )
