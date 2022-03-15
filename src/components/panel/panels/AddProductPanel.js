@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-import CardContainer from '../cards/CardContainer';
+import PanelContainer from './PanelContainer';
 
 export default function AddProductPanel(props) {
   return (
     <PanelStyles>
-      <CardContainer title="Add New Product">
-      </CardContainer>    
+      <PanelContainer title="Add New Product">
+      </PanelContainer>    
     </PanelStyles>
   )
 };

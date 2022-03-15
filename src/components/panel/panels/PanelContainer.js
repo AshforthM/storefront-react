@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import CardList from './CardList';
+import CardList from '../cards/CardList';
 
-export default function CardContainer(props) {
+export default function PanelContainer(props) {
   return (
     <CardContainerStyles>
         <CardContainerHeadingStyles>{props.title || "Product Display"}</CardContainerHeadingStyles>
