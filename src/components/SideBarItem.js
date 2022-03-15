@@ -24,19 +24,19 @@ function SideBarItem(props) {
 export { SideBarItem };
 
 const SideBarItemStyles = styled.li`
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 1px 1px #121616;
+    background-color: #fbae2d;
+    /* cursor: ${(props) => (props.pointer ? "pointer" : "auto")}; */
+  }
   a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     //box-shadow: 0 1px 0 0 #121616;
     margin: 0.25rem 0;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      box-shadow: 1px 1px #121616;
-      background-color: #fbae2d;
-      /* cursor: ${(props) => (props.pointer ? "pointer" : "auto")}; */
-    }
   }
 
   h3 {
