@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { signOut } from "firebase/auth";
-import { auth } from "../libs/firebase/firebaseConfig";
+import { auth } from "../../libs/firebase/firebaseConfig";
 
-import { SideBarItem } from "../components/SideBarItem";
-import { IconSidebar } from "../ui/icons";
+import { SideBarItem } from "./SideBarItem";
+import { IconSidebar } from "../../ui/icons";
 
 import { GiVhs } from "react-icons/gi";
 import { FaShippingFast } from "react-icons/fa"
@@ -19,7 +19,7 @@ export default function SideBar(props) {
   return (
     <SideBarStyles>
       <ul>
-        <h2>{props.title}</h2>
+        <h2>{props.title || ""}</h2>
         <SideBarSectionStyles>
           <SideBarItem as="a" title="Vendors" icon={<IoStorefrontOutline />}></SideBarItem>
           <SideBarItem as="a" title="Users" icon={<IoPeopleCircleOutline />}></SideBarItem>

@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
-import { IconAppbar } from "../ui/icons";
+import { IconAppbar } from "../../ui/icons";
 
 import { IoSettingsOutline, IoMailOutline, IoNotificationsOutline } from 'react-icons/io5';
 import { CgProfile } from 'react-icons/cg';

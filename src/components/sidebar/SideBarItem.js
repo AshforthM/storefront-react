@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { IconSidebar } from "../ui/icons";
+import { IconSidebar } from "../../ui/icons";
 
 import { GrFormNext } from "react-icons/gr";
 

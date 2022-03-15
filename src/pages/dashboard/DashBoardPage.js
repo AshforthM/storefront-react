@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../libs/firebase/firebaseConfig";
 
-import AppBar from "../../components/AppBar";
-import SideBar from "../../components/SideBar";
-import Panel from "../../components/Panel";
+import AppBar from "../../components//appbar/AppBar";
+import SideBar from "../../components//sidebar/SideBar";
 
 function DashBoardPage(props) {
   const [isUser, setIsUser] = useState(false);
@@ -27,8 +26,8 @@ function DashBoardPage(props) {
     return (
       <Dashboard>
         <AppBar />
-        <SideBar title="" />
-        <Panel />
+        <SideBar />
+        <Outlet />
       </Dashboard>
     );
   } else {
