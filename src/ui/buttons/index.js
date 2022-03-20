@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 const Button = styled.button`
 
 /* background-color: ${props => props.bgcolor || "transparent"};
@@ -32,7 +30,5 @@ const ButtonSubmit = styled(Button)`
         background-color: #fbae2d;
     }
 `;
-
-
 
 export { Button, ButtonSubmit };

@@ -6,7 +6,7 @@ export default function PanelContainer(props) {
   return (
     <CardContainerStyles>
         <CardContainerHeadingStyles>{props.title || "Product Display"}</CardContainerHeadingStyles>
-        {/* <CardList/> */}
+        {props.children}
     </CardContainerStyles>
   )
 };
