@@ -14,7 +14,7 @@ export default function ProductEditor() {
 }
 
 const ProductEditorStyles = styled.aside`
-  background-color:lightcoral;
+  //background-color:lightcoral;
   width: auto;
   margin: 0.5rem;
   border-radius: 8px;
