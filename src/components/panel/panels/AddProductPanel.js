@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import ProductDataEntryForm from './ProductDataEntryForm';
 import PanelContainer from './PanelContainer';
 import ProductPreview from './ProductPreview';
+import ProductEditor from './ProductEditor';
 
 export default function AddProductPanel(props) {
   return (
     <PanelStyles>
       <PanelContainer title="Add New Product">
-        <ProductDataEntryForm/>
-        <ProductPreview/>
+        <ProductEditor/>
       </PanelContainer>    
     </PanelStyles>
   )

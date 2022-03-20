@@ -5,19 +5,29 @@ export default function ProductDataEntryForm() {
   return (
     <ProductDataEntryFormStyles>
       
-      <ProductImage>img</ProductImage>
+      <ProductImage>
+        <label>Product Image</label>
+      </ProductImage>
 
-      <ProductName>name</ProductName>
+      <ProductName>
+        <label>Product Name</label>
+      </ProductName>
 
-      <ProductPrice>$</ProductPrice>
+      <ProductPrice>
+        <label>Product Price</label>
+      </ProductPrice>
 
-      <ProductDescription>Desc</ProductDescription>
+      <ProductDescription>
+        <label>Product Description</label>
+      </ProductDescription>
+
     </ProductDataEntryFormStyles>
   );
 }
 
 const ProductDataEntryFormStyles = styled.form`
   background-color:lightblue;
+  width: 380px;
 `;
 
 const ProductImage = styled.div`
