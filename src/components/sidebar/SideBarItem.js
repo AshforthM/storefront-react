@@ -10,7 +10,7 @@ function SideBarItem(props) {
     <SideBarItemStyles>
       <a onClick={props.onClick}>
         <div>
-          <IconSidebar as="a">{props.icon}</IconSidebar>
+          <IconSidebar>{props.icon}</IconSidebar>
           <h3>{props.title}</h3>
         </div>
         <div>

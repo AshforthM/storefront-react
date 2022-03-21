@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Icon = styled.li`
+const Icon = styled.i`
   font-size: 28px;
 `;
 

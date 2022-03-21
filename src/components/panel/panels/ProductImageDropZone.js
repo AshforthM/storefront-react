@@ -2,11 +2,11 @@ import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import styled from 'styled-components';
 
-export default function ProductImageDropBox({ setPreviewImagePath, ...props }) {
+export default function ProductImageDropBox({ setProductImage, ...props }) {
   const onDrop = useCallback((acceptedFiles) => {
     const path = acceptedFiles[0];
 
-    setPreviewImagePath(URL.createObjectURL(path));
+    setProductImage(URL.createObjectURL(path));
   }, []);
   const {
     getRootProps,

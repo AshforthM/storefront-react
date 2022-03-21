@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-import brandingImage from '../../images/login-branding.jpg'
+import brandingImage from '../../assets/images/login-branding.jpg'
 
 export default function Branding() {
   return (

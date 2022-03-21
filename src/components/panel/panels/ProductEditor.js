@@ -4,11 +4,21 @@ import styled from 'styled-components';
 import ProductDataEntryForm from './ProductDataEntryForm';
 import ProductPreview from './ProductPreview';
 
-export default function ProductEditor() {
+export default function ProductEditor(props) {
   return (
     <ProductEditorStyles>
-        <ProductDataEntryForm/>
-        <ProductPreview/>
+        <ProductDataEntryForm 
+        handleProductName={props.handleProductName} 
+        handleProductPrice={props.handleProductPrice}
+        setProductImage={props.setProductImage}
+        handleProductDescription={props.handleProductDescription}
+        />
+        <ProductPreview 
+        productName={props.productName} 
+        productPrice={props.productPrice}
+        productImage={props.productImage}
+        productDescription={props.productDescription}
+        />
     </ProductEditorStyles>
   )
 }

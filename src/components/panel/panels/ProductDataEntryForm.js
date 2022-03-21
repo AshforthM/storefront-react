@@ -4,30 +4,30 @@ import styled from "styled-components";
 import ProductImageDropZone from './ProductImageDropZone';
 import {Label, Input, TextArea} from './../../../ui/text'
 
-export default function ProductDataEntryForm() {
+export default function ProductDataEntryForm(props) {
   return (
     <ProductDataEntryFormStyles>
       
       <ProductImage>
-        <Label>Product Image</Label>
-        <ProductImageDropZone/>
+        <Label>Image</Label>
+        <ProductImageDropZone setProductImage={props.setProductImage} />
       </ProductImage>
 
       <fieldset>
         <ProductName>
-          <Label>Product Name</Label>
-          <Input></Input>
+          <Label>Name</Label>
+          <Input onChange={(e) => props.handleProductName(e.target.value.trim())} maxLength={30}/>
         </ProductName>
 
         <ProductPrice>
-          <Label>Product Price</Label>
-          <Input></Input>
+          <Label>Price</Label>
+          <Input onChange={(e) => props.handleProductPrice(e.target.value.trim())} maxLength={8}/>
         </ProductPrice>
       </fieldset>
 
       <ProductDescription>
-        <Label>Product Description</Label>
-        <TextArea rows={6}></TextArea>
+        <Label>Description</Label>
+        <TextArea rows={6} onChange={(e) => props.handleProductDescription(e.target.value.trim())} maxLength={100}></TextArea>
       </ProductDescription>
 
     </ProductDataEntryFormStyles>
@@ -35,8 +35,9 @@ export default function ProductDataEntryForm() {
 }
 
 const ProductDataEntryFormStyles = styled.form`
-  //background-color:lightblue;
+  background-color: lightgray;
   width: 380px;
+  padding: 2rem;
 
   input:focus, textarea:focus{
     border-color: cornflowerblue;
