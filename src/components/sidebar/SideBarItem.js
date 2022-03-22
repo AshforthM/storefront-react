@@ -1,8 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { IconSidebar } from "../../ui/icons";
-
 import { GrFormNext } from "react-icons/gr";
 
 function SideBarItem(props) {
@@ -11,7 +10,7 @@ function SideBarItem(props) {
     <SideBarItemStyles onClick={props.onClick} {...props}>
       <IconSidebar>{props.icon}</IconSidebar>
       <h3>{props.title}</h3>
-      <GrFormNext />
+      {props.formIcon || <GrFormNext/>}
     </SideBarItemStyles>
   );
   //icon, p, h3 ONLY
@@ -33,8 +32,8 @@ const SideBarItemStyles = styled.li`
 
   &:hover {
     box-shadow: 1px 1px #121616;
-    background-color: #fbae2d;
-    cursor: ${(props) => (props.pointer ? "pointer" : "auto")};
+    background-color: rgba(251, 174, 45, 0.6);
+    cursor: ${props => props.pointer ? "pointer" : "auto"};
   }
 
   h3 {

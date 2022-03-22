@@ -27,7 +27,7 @@ const ButtonSubmit = styled(Button)`
     transition: all 0.2s ease-in-out;
     &:hover {
         box-shadow: 1px 1px #121616;
-        background-color: #fbae2d;
+        background-color: rgba(251, 174, 45, 0.85);
     }
 `;
 
