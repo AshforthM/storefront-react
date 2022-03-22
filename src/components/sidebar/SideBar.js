@@ -41,7 +41,7 @@ export default function SideBar(props) {
           ></SideBarItem>
         </SideBarSectionStyles>
         <SideBarSectionStyles>
-          <SideBarItem as="a" title="Products" icon={<GiVhs />}></SideBarItem>
+          <SideBarItem title="Products" icon={<GiVhs />} pointer={true}></SideBarItem>
           <MdDashboard size="1.75rem"/>
           <ProductOptions />
           

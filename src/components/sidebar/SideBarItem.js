@@ -6,18 +6,18 @@ import { IconSidebar } from "../../ui/icons";
 import { GrFormNext } from "react-icons/gr";
 
 function SideBarItem(props) {
-  console.log(props.pointer);
+
   return (
-    <SideBarItemStyles onClick={props.onClick}>
-      <div>
-        <IconSidebar>{props.icon}</IconSidebar>
-        <h3>{props.title}</h3>
-      </div>
-      <div>
-        <GrFormNext />
-      </div>
+    <SideBarItemStyles onClick={props.onClick} {...props}>
+      <IconSidebar>{props.icon}</IconSidebar>
+      <h3>{props.title}</h3>
+      <GrFormNext />
     </SideBarItemStyles>
   );
+  //icon, p, h3 ONLY
+  //flexbox
+  //margin after the h3 auto
+  //if we need additional control, wrap all 3 in a span
 }
 
 export { SideBarItem };
@@ -30,26 +30,20 @@ const SideBarItemStyles = styled.li`
   margin: 0.25rem 0;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-  //user-select: none;
-
-  //3 spans, li flex
 
   &:hover {
     box-shadow: 1px 1px #121616;
-    //background-color: #fbae2d;
-    background-color: ${props => props.pointer ? "red" : "green"};
-    cursor: ${props => props.pointer ? "pointer" : "auto"};
+    background-color: #fbae2d;
+    cursor: ${(props) => (props.pointer ? "pointer" : "auto")};
   }
 
   h3 {
     font-size: 22px;
     padding: 0.2rem 0 0 0;
+    margin-right: auto;
   }
 
-  div {
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  svg{
+    font-size: 22px;
   }
 `;
