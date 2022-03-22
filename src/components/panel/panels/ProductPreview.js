@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import PlaceHolderImage from '../../../assets/images/login-branding.jpg'
-
 export default function ProductPreview(props) {
   return (
     <ProductPreviewStyles>
       <ProductImage>
-        <img src={props.productImage} alt="Product Image"></img>
+        <img src={props.productImage} alt="VHS Product"></img>
       </ProductImage>
       <ProductName>{props.productName}</ProductName>
       <ProductPrice>${props.productPrice}</ProductPrice>
