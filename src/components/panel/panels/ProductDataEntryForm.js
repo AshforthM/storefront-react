@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import {ButtonSubmit} from '../../../ui/buttons'
 import ProductImageDropZone from './ProductImageDropZone';
 import {Label, Input, TextArea} from './../../../ui/text'
 
 export default function ProductDataEntryForm(props) {
   return (
-    <ProductDataEntryFormStyles>
+    <ProductDataEntryFormStyles onSubmit={props.handleSubmit}>
       
       <ProductImage>
         <Label>Image</Label>
@@ -29,6 +30,8 @@ export default function ProductDataEntryForm(props) {
         <Label>Description</Label>
         <TextArea rows={6} onChange={(e) => props.handleProductDescription(e.target.value.trim())} maxLength={100}></TextArea>
       </ProductDescription>
+
+      <ButtonSubmit>{props.buttonTitle}</ButtonSubmit>
 
     </ProductDataEntryFormStyles>
   );

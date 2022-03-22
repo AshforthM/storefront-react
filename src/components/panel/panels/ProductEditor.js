@@ -12,6 +12,8 @@ export default function ProductEditor(props) {
         handleProductPrice={props.handleProductPrice}
         setProductImage={props.setProductImage}
         handleProductDescription={props.handleProductDescription}
+        handleSubmit={props.handleSubmit}
+        buttonTitle={props.buttonTitle}
         />
         <ProductPreview 
         productName={props.productName} 
