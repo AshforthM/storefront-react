@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import { useAddProduct } from "../../../hooks/useAddProduct";
 import { useNumberFormat } from './../../../hooks/useNumberFormat';
 import PanelContainer from "./PanelContainer";
 import ProductEditor from "./ProductEditor";
@@ -12,8 +13,9 @@ export default function AddProductPanel(props) {
   const [productName, setProductName] = useState('Product Name');
   const [productPrice, setProductPrice] = useState('0.00');
   const priceFormatter = useNumberFormat();
-  const [productImage, setProductImage] = useState(VHSPreview);
+  const [productImage, setProductImage] = useState({previewImage:VHSPreview, file:null});
   const [productDescription, setProductDescription] = useState('Product Description')
+  const [loading, productLoader] = useAddProduct();
 
   function handleProductName (name){
     setProductName(name);
@@ -35,6 +37,8 @@ export default function AddProductPanel(props) {
       productDescription
     };
     setIsWriting(true); //user requests to update product
+
+    productLoader(productData, productImage.file);
   }
 
   if(isWriting){
@@ -48,7 +52,7 @@ export default function AddProductPanel(props) {
           handleProductName={handleProductName}
           productPrice={productPrice}
           handleProductPrice={handleProductPrice}
-          productImage={productImage}
+          productImage={productImage.previewImage}
           setProductImage={setProductImage}
           productDescription={productDescription}
           handleProductDescription={handleProductDescription}
