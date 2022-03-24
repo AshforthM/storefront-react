@@ -85,6 +85,7 @@ const SideBarStyles = styled.div`
   box-shadow: 2.5px 0 2.5px -2px #121616;
   margin: 0 0.1rem 0 0;
   padding: 8px;
+  text-decoration: none;
   a{
     text-decoration: none;
     color: inherit;
