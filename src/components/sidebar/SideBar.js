@@ -5,7 +5,6 @@ import { auth } from "../../libs/firebase/firebaseConfig";
 import { Link } from "react-router-dom";
 
 import { SideBarItem } from "./SideBarItem";
-import { IconSidebar } from "../../ui/icons";
 import ProductOptions from "./ProductOptions";
 
 import { GiVhs } from "react-icons/gi";

@@ -1,12 +1,55 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-export default function Card() {
+export default function Card(props) {
   return (
-    <CardListStyles>Card</CardListStyles>
-  )
-};
+    <ProductCardStyles>
+      <ProductImage>
+        <img src={props.productImage} alt="VHS Product"></img>
+      </ProductImage>
+      <ProductName>{props.productName}</ProductName>
+      <ProductPrice>${props.productPrice}</ProductPrice>
+      <ProductDescription>{props.productDescription}</ProductDescription>
+    </ProductCardStyles>
+  );
+}
 
-const CardListStyles = styled.li`
-  background-color: lightskyblue;
+const ProductCardStyles = styled.aside`
+  height: 100%;
+  max-width: 360px;
+  align-self: stretch;
+  padding: 2rem 2rem;
+  margin: 0.5rem;
+  background-color: lightgray;
+`;
+
+const ProductImage = styled.div`
+  margin: 0 0 1rem 0;
+  width: 300px;
+  img {
+    width: 100%;
+    height: 286px;
+  }
+`;
+
+const ProductName = styled.h2`
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: -0.5px;
+  word-wrap: break-word;
+`;
+
+const ProductPrice = styled.p`
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: -1px;
+  word-wrap: break-word;
+  margin: -0.3rem 0 0.25rem 0;
+`;
+
+const ProductDescription = styled.p`
+  font-size: 1.05rem;
+  max-width: 100%;
+  word-wrap: break-word;
 `;

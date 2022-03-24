@@ -134,7 +134,7 @@ const SignInStyles = styled.div`
 
 const ForgotPasswordStyles = styled.div`
   a {
-    color: #121616;
+    color: inherit;
     text-decoration: underline;
     transition: all 0.1s ease-in-out;
     &:hover {        
