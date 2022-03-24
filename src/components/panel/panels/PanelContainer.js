@@ -8,7 +8,7 @@ export default function PanelContainer(props) {
       <CardContainerHeadingStyles>
         {props.title || "Product Display"}
       </CardContainerHeadingStyles>
-      <CardListStyles>{props.children}</CardListStyles>
+      {props.children}
     </CardContainerStyles>
   );
 }
@@ -29,27 +29,4 @@ const CardContainerHeadingStyles = styled.h1`
   text-align: left;
   padding: 1rem 2rem;
   box-shadow: 0 1px 0 #161616;
-`;
-
-const CardListStyles = styled.div`
-  //background-color: rgba(1,1,1,0.2);
-  ::-webkit-scrollbar {
-    width: 14px;
-  }
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 14px 14px transparent;
-    border: solid 4px transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 14px 14px #bbbbbe;
-    border: solid 4px transparent;
-    border-radius: 14px;
-  }
-  ::-webkit-scrollbar-button {
-    display: none;
-  }
-  min-height: calc(100vh - calc(64px + 4rem + 60px));
-  display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
 `;

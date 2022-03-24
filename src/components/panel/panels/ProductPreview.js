@@ -18,7 +18,7 @@ const ProductPreviewStyles = styled.aside`
   max-width: 360px;
   align-self: stretch;
   padding: 2rem 2rem;
-  background-color: lightgray;
+  background-color: #edece9;
 `;
 
 const ProductImage = styled.div`
