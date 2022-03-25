@@ -86,8 +86,8 @@ const SideBarStyles = styled.div`
   padding: 8px;
   text-decoration: none;
   a{
-    text-decoration: inherit;
-    color: inherit;
+    text-decoration: none;
+    color: #121616;
   }
 
   h2 {
