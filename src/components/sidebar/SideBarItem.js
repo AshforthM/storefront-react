@@ -31,6 +31,8 @@ const SideBarItemStyles = styled.li`
   transition: all 0.2s ease-in-out;
 
   &:hover {
+    text-decoration: none;
+    color: inherit;
     box-shadow: 1px 1px #121616;
     background-color: rgba(251, 174, 45, 0.6);
     cursor: ${props => props.pointer ? "pointer" : "auto"};

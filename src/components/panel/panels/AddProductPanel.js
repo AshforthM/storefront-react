@@ -3,18 +3,25 @@ import styled from "styled-components";
 
 import { useAddProduct } from "../../../hooks/useAddProduct";
 import { useNumberFormat } from './../../../hooks/useNumberFormat';
+import UploadFeedback from "./UploadFeedback";
 import PanelContainer from "./PanelContainer";
 import ProductEditor from "./ProductEditor";
 import VHSPreview from '../../../assets/images/login-branding.jpg';
 
+const defaults={
+  description:"Product Description.",
+  name: "Product Name",
+  price: "0.00",
+}
+
 export default function AddProductPanel(props) {
   
-  const [isWriting, setIsWriting] = useState(false)
-  const [productName, setProductName] = useState('Product Name');
-  const [productPrice, setProductPrice] = useState('0.00');
+  const [isWriting, setIsWriting] = useState(false);
+  const [productName, setProductName] = useState(defaults.name);
+  const [productPrice, setProductPrice] = useState(defaults.price);
   const priceFormatter = useNumberFormat();
   const [productImage, setProductImage] = useState({previewImage:VHSPreview, file:null});
-  const [productDescription, setProductDescription] = useState('Product Description')
+  const [productDescription, setProductDescription] = useState(defaults.description);
   const [loading, productLoader] = useAddProduct();
 
   function handleProductName (name){
@@ -37,12 +44,15 @@ export default function AddProductPanel(props) {
       productDescription
     };
     setIsWriting(true); //user requests to update product
-
     productLoader(productData, productImage.file);
+    setProductDescription(defaults.description);
+    setProductImage({previewImage:VHSPreview, file:null});
+    setProductName(defaults.name);
+    setProductPrice(defaults.price);
   }
 
   if(isWriting){
-    return <h1>Editor Feedback Component</h1>
+    return <UploadFeedback status={loading} writeCompleted={setIsWriting}/>
   }else{
     return (
       <PanelStyles>
