@@ -27,7 +27,7 @@ export default function AllProductsPanel(props) {
 const PanelStyles = styled.div`
   background-color: #edece9;
   min-height: calc(100vh - calc(64px));
-  width: calc(100vw - 289px - 0.1rem);
+  width: calc(100% - 289px - 0.1rem);
 `;
 
 const AllProductsContainer = styled.div`

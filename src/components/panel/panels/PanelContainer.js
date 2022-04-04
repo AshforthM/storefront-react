@@ -16,7 +16,7 @@ export default function PanelContainer(props) {
 const CardContainerStyles = styled.div`
   background-color: #faf9f6;
   width: calc(100vw - calc(289px + 4rem));
-  height: calc(100vh - calc(64px + 4rem));
+  min-height: calc(100vh - calc(64px + 4rem));
   margin: 2rem;
   border-radius: 22px;
   box-shadow: 0px 0px 1px 1px #161616;

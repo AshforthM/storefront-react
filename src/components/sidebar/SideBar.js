@@ -88,6 +88,10 @@ const SideBarStyles = styled.div`
   a{
     text-decoration: none;
     color: #121616;
+    &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
   }
 
   h2 {
