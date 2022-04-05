@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useGetProducts } from "../../../hooks/useGetProduct";
+
 import Card from "../cards/Card";
 import PanelContainer from "./PanelContainer";
-import VHSPreview from "../../../assets/images/login-branding.jpg";
 
 export default function AllProductsPanel(props) {
+  const productData = useGetProducts("products")
+
   return (
     <PanelStyles>
       <PanelContainer title="Product Listings">
         <AllProductsContainer>
-          <Card
-            productName={"VHS Title"}
-            productPrice={"100.00"}
-            productImage={VHSPreview}
-            productDescription={
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m"
-            }
-          ></Card>
+          {productData ? (
+            productData.map((product) => <Card key ={product.uid} product={product} />)
+          ) : (
+            <p>No products currently available</p>
+          )}
         </AllProductsContainer>
       </PanelContainer>
     </PanelStyles>

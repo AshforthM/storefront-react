@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Card(props) {
+export default function Card({product, ...props}) {
+  const {productName, imageUrl, productPrice, productDescription} = {...product};
   return (
     <ProductCardStyles>
       <ProductImage>
-        <img src={props.productImage} alt="VHS Product"></img>
+        <img src={imageUrl} alt="VHS Product"></img>
       </ProductImage>
-      <ProductName>{props.productName}</ProductName>
-      <ProductPrice>${props.productPrice}</ProductPrice>
-      <ProductDescription>{props.productDescription}</ProductDescription>
+      <ProductName>{productName}</ProductName>
+      <ProductPrice>${productPrice}</ProductPrice>
+      <ProductDescription>{productDescription}</ProductDescription>
     </ProductCardStyles>
   );
 }
