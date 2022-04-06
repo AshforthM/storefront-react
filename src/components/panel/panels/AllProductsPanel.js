@@ -5,18 +5,23 @@ import { useGetProducts } from "../../../hooks/useGetProduct";
 
 import Card from "../cards/Card";
 import PanelContainer from "./PanelContainer";
+import { AiOutlineCloudDownload } from "react-icons/ai";
 
 export default function AllProductsPanel(props) {
-  const productData = useGetProducts("products")
+  const productData = useGetProducts();
 
   return (
     <PanelStyles>
       <PanelContainer title="Product Listings">
         <AllProductsContainer>
           {productData ? (
-            productData.map((product) => <Card key ={product.uid} product={product} />)
+            productData.map((product) => (
+              <Card key={product.uid} product={product} />
+            ))
           ) : (
-            <p>No products currently available</p>
+            <Feedback>
+              <AiOutlineCloudDownload color="#fbae2d" size="12rem" />
+            </Feedback>
           )}
         </AllProductsContainer>
       </PanelContainer>
@@ -54,3 +59,10 @@ const AllProductsContainer = styled.div`
     display: none;
   }
 `;
+
+const Feedback = styled.figure`
+  align-self: center;
+  margin: auto;
+`;
+
+

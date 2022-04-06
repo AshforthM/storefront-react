@@ -15,10 +15,12 @@ export default function ProductPreview(props) {
 }
 
 const ProductPreviewStyles = styled.aside`
+  margin: 1rem 0;
   max-width: 360px;
   align-self: stretch;
   padding: 2rem 2rem;
   background-color: #edece9;
+  border-radius: 8px;
 `;
 
 const ProductImage = styled.div`

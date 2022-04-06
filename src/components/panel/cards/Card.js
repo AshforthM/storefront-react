@@ -22,7 +22,6 @@ const ProductCardStyles = styled.aside`
   padding: 1rem 2rem;
   margin: 0.5rem;
   background-color: #edece9;
-  //box-shadow: 0 0 0 1px #121616;
   border-radius: 8px;
 `;
 

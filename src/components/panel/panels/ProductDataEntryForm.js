@@ -48,9 +48,11 @@ export default function ProductDataEntryForm(props) {
 }
 
 const ProductDataEntryFormStyles = styled.form`
+  margin: 1rem 0;
   background-color: #edece9;
   width: 380px;
   padding: 2rem;
+  border-radius: 8px;
 
   input:focus,
   textarea:focus {
@@ -62,6 +64,10 @@ const ProductDataEntryFormStyles = styled.form`
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+  }
+  button{
+    margin-top: 1rem;
+    width: 100%;
   }
 `;
 
