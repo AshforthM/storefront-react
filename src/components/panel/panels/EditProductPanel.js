@@ -14,5 +14,5 @@ export default function AddProductPanel(props) {
 const PanelStyles = styled.div`
   background-color: #EDECE9;
   min-height: calc(100vh - calc(64px));
-  width: calc(100vw - 289px - 0.1rem);
+  width: calc(100% - 289px - 0.1rem);
 `;

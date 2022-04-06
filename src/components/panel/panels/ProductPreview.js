@@ -15,20 +15,22 @@ export default function ProductPreview(props) {
 }
 
 const ProductPreviewStyles = styled.aside`
-  margin: 1rem 0;
+  height: 520px;
   max-width: 360px;
   align-self: stretch;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
   background-color: #edece9;
   border-radius: 8px;
 `;
 
 const ProductImage = styled.div`
-  margin: 0 0 1rem 0;
+  padding: 0.25rem 0 1rem 0;
   width: 300px;
-  img{
+  img {
     width: 100%;
-    height: 364px;
+    height: 286px;
+    border-radius: 16px;
   }
 `;
 
@@ -45,7 +47,7 @@ const ProductPrice = styled.p`
   font-weight: 100;
   letter-spacing: -1px;
   word-wrap: break-word;
-  margin: -0.3rem 0 0.25rem 0;
+  margin: 0.25rem 0 0.25rem 0;
 `;
 
 const ProductDescription = styled.p`
