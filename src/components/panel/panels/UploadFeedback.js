@@ -36,7 +36,7 @@ export default function UploadFeedback(props) {
 }
 
 const UploadFeedbackStyles = styled.div`
-  width: calc(100vw - 289px - 0.1rem);
+  width: calc(100% - 289px - 0.1rem);
   margin: 4rem auto 0;
   padding: 0 4rem;
   text-align: center;

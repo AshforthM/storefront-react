@@ -24,7 +24,7 @@ const ButtonSubmit = styled(Button)`
   color: #121616;
   font-weight: 400;
   transition: all 0.2s ease-in-out;
-  &:hover {
+  &:hover:enabled{
     box-shadow: 1px 1px #121616;
     background-color: rgba(251, 174, 45, 0.85);
   }
