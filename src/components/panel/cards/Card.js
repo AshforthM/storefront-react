@@ -53,7 +53,12 @@ const ProductCardStyles = styled.aside`
   align-self: stretch;
   padding: 1rem 2rem;
   margin: 0.5rem;
-  background-color: #edece9;
+  //background-color: #edece9;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0.25),
+    hsl(0 0% 0% / 0.1) 50%,
+    hsl(0 0% 0% / 0.05)
+  );
   border-radius: 8px;
   transition: transform 0.5s ease;
 

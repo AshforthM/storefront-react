@@ -13,9 +13,8 @@ export default function AppBar(props) {
     <AppBarStyles>
       <ul>
         <AppBarBrandingStyles>
-          <AppBarBrandingLogo>
-            <h2>VHS</h2>
-            <h3> Store</h3>
+          <AppBarBrandingLogo to="/dashboard">
+            <h2>VHS Store</h2>
           </AppBarBrandingLogo>
         </AppBarBrandingStyles>
         <AppBarOptionsStyles>
@@ -53,16 +52,18 @@ const AppBarBrandingStyles = styled.div`
   padding: 0 8px 0 0;
 `;
 
-const AppBarBrandingLogo = styled.a`
+const AppBarBrandingLogo = styled(Link)`
   text-decoration: none;
-  color: inherit;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
+  color: inherit;
 
   &:hover{
+    cursor: pointer;
     text-decoration: none;
+    transform: scale(1.05);
     color: inherit;
   }
 
