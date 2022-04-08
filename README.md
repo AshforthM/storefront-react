@@ -4,6 +4,9 @@ Sample storefront management website for selling VHS tapes. Created using React 
 Current build has login authorization with protected routes & 404 page. Users can add new products and see a live preview of the product card, with upload feedback on submission. Update and Delete functionality will be added soon.
 
 ## [Link to live website](https://vhs-store-react.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0b27a26d-e2c7-484f-87ae-71fa4064f770/deploy-status)](https://app.netlify.com/sites/vhs-store-react/deploys)
+\
+\
 User: user@vhs.com
 Password: 123456
 
