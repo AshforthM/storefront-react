@@ -18,7 +18,7 @@ export default function ProductDataEntryForm(props) {
           <Label>Name</Label>
           <Input
             onChange={(e) => props.handleProductName(e.target.value.trim())}
-            maxLength={30}
+            maxLength={20}
           />
         </ProductName>
 
@@ -38,7 +38,7 @@ export default function ProductDataEntryForm(props) {
           onChange={(e) =>
             props.handleProductDescription(e.target.value.trim())
           }
-          maxLength={100}
+          maxLength={90}
         ></TextArea>
       </ProductDescription>
 
